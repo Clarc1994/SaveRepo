@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="SaveRepo" customModuleProvider="target">
+            <connections>
+                <outlet property="saveRepoButton" destination="EIo-Se-uke" id="Sw5-tT-jQK"/>
+                <outlet property="searchRepoButton" destination="uFc-uV-ayj" id="cCK-x5-3aT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="WelcomeContentView" customModule="SaveRepo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SaveRepo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e85-MV-FP5">
+                    <rect key="frame" x="40" y="100" width="334" height="52"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="43"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFc-uV-ayj">
+                    <rect key="frame" x="52" y="423" width="310" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cEm-YV-lD3"/>
+                        <constraint firstAttribute="width" constant="310" id="hh2-1r-6mE"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Szukaj repozytoria">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pressSearch:" destination="-1" eventType="touchUpInside" id="JSh-u0-34G"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIo-Se-uke">
+                    <rect key="frame" x="52" y="513" width="310" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="faO-fu-tQ6"/>
+                        <constraint firstAttribute="width" constant="310" id="xX9-gi-g9m"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Zapisane repozytoria">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pressSaveRepository:" destination="-1" eventType="touchUpInside" id="1Nt-MQ-SDE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <constraints>
+                <constraint firstItem="e85-MV-FP5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="8G1-ne-hc6"/>
+                <constraint firstAttribute="trailing" secondItem="e85-MV-FP5" secondAttribute="trailing" constant="40" id="BNH-k4-sVd"/>
+                <constraint firstItem="uFc-uV-ayj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KDc-fb-iD9"/>
+                <constraint firstItem="uFc-uV-ayj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z9m-pR-hct"/>
+                <constraint firstItem="EIo-Se-uke" firstAttribute="top" secondItem="uFc-uV-ayj" secondAttribute="bottom" constant="40" id="cNq-xR-i9w"/>
+                <constraint firstItem="EIo-Se-uke" firstAttribute="centerX" secondItem="uFc-uV-ayj" secondAttribute="centerX" id="p2r-24-V1q"/>
+                <constraint firstItem="e85-MV-FP5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="uYY-ZF-bhQ"/>
+            </constraints>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

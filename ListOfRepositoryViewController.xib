@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListOfRepositoryViewController" customModule="SaveRepo" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyImageView" destination="R8K-hg-UHK" id="WZo-Ui-mJd"/>
+                <outlet property="emptyLabel" destination="TwG-WX-NWC" id="RQT-3q-evM"/>
+                <outlet property="prevButton" destination="Kav-Ij-vUg" id="8cW-6f-3wg"/>
+                <outlet property="tableView" destination="0nJ-av-Vgp" id="hwg-9c-XId"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ListOfRepositoryContentView" customModule="SaveRepo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kav-Ij-vUg">
+                    <rect key="frame" x="30" y="806" width="354" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="n3P-3E-TmG"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Wstecz">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pressPrevButton:" destination="-1" eventType="touchUpInside" id="KFM-yb-fiS"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-av-Vgp">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemTealColor"/>
+                </tableView>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="WwZ-lj-Wb3">
+                    <rect key="frame" x="0.0" y="62" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WwZ-lj-Wb3" id="SxN-EV-RXn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableViewCellContentView>
+                </tableViewCell>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="R8K-hg-UHK">
+                    <rect key="frame" x="87" y="328" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="82l-3o-mgg"/>
+                        <constraint firstAttribute="width" constant="240" id="ZFb-AE-Mg2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brak wyników" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwG-WX-NWC">
+                    <rect key="frame" x="0.0" y="578" width="414" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TwG-WX-NWC" secondAttribute="trailing" id="6rm-cz-G6s"/>
+                <constraint firstItem="Kav-Ij-vUg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Dnj-CA-fwW"/>
+                <constraint firstAttribute="bottom" secondItem="Kav-Ij-vUg" secondAttribute="bottom" constant="50" id="FiM-DO-g2V"/>
+                <constraint firstItem="Kav-Ij-vUg" firstAttribute="top" secondItem="0nJ-av-Vgp" secondAttribute="bottom" constant="10" id="IXD-LR-8ow"/>
+                <constraint firstItem="0nJ-av-Vgp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mya-9K-rmK"/>
+                <constraint firstAttribute="trailing" secondItem="0nJ-av-Vgp" secondAttribute="trailing" id="N6n-Oc-rU4"/>
+                <constraint firstItem="TwG-WX-NWC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PEa-qL-gxi"/>
+                <constraint firstAttribute="trailing" secondItem="Kav-Ij-vUg" secondAttribute="trailing" constant="30" id="Qi2-tB-tZh"/>
+                <constraint firstItem="R8K-hg-UHK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UIc-vo-XuW"/>
+                <constraint firstItem="TwG-WX-NWC" firstAttribute="top" secondItem="R8K-hg-UHK" secondAttribute="bottom" constant="10" id="a3H-R4-tSP"/>
+                <constraint firstItem="R8K-hg-UHK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="buP-XI-Ayb"/>
+                <constraint firstItem="0nJ-av-Vgp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hdK-Fk-Ryq"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
